@@ -1,7 +1,7 @@
 - type: entity
   abstract: true
   parent: BaseStructure
-  id: BaseWall
+  id: BaseStructureWall
   name: basewall
   description: Keeps the air in and the greytide out.
   placement:
@@ -954,6 +954,17 @@
           5: { state: shuttle_construct-5, visible: true}
   - type: Reflect
     reflectProb: 1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
 
 - type: entity
   parent: BaseWall
