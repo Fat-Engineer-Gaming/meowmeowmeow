@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseStructure
   id: BaseStructureWall
-  name: basewall
+  name: basestructurewall
   description: Keeps the air in and the greytide out.
   placement:
     mode: SnapgridCenter
@@ -22,7 +22,6 @@
     tags:
     - Wall
   - type: IsRoof
-  - type: Occluder
   - type: Sprite
     drawdepth: Walls
   - type: Icon
@@ -55,7 +54,15 @@
 
 - type: entity
   abstract: true
-  parent: BaseWall
+  parent: BaseStructureWall
+  id: BaseWall
+  name: basewall
+  components:
+  - type: Occluder
+
+- type: entity
+  abstract: true
+  parent: BaseStructureWall
   id: WallDiagonalBase
   suffix: Diagonal
   components:
