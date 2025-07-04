@@ -696,10 +696,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonal/reinforced_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/reinforced_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonal/reinforced_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/reinforced_diagonal.rsi
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -841,10 +841,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonal/shuttle_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/shuttle_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonal/shuttle_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/shuttle_diagonal.rsi
     state: state0
   - type: Reflect
     reflectProb: 1
@@ -1022,10 +1022,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonal/solid_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/solid_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonal/solid_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/solid_diagonal.rsi
     state: state0
   - type: Destructible
     thresholds:
@@ -1398,10 +1398,10 @@
     node: diagonalMiningWall
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonal/mining_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/mining_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonal/mining_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonals/mining_diagonal.rsi
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
