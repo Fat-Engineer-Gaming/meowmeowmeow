@@ -11,6 +11,15 @@
     snapCardinals: true
   - type: Destructible
     thresholds:
+    - trigger: # Excess damage, don't spawn entities
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/poster_broken.ogg
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
     - trigger:
         !type:DamageTrigger
         damage: 5
@@ -931,6 +940,7 @@
   name: "No ERP"
   description: "A good reminder to check yourself before you wreck yourself. Wreck, as in be launched out an airlock." # imp
   components:
+  # imp below. i don't want to talk about it.
   - type: Sprite
     state: poster34_legit
 

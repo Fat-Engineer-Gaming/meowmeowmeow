@@ -75,6 +75,11 @@
   id: AirlockDetective
   suffix: Detective
 
+- type: entity
+  parent: AirlockSecurity
+  id: AirlockSecurityMedical
+  suffix: Security/Medical
+
 # Service
 - type: entity
   parent: Airlock
@@ -221,6 +226,11 @@
   parent: AirlockSecurityGlass
   id: AirlockDetectiveGlass
   suffix: Detective
+
+- type: entity
+  parent: AirlockSecurityGlass
+  id: AirlockSecurityMedicalGlass
+  suffix: Security/Medical
 
 # Service
 - type: entity

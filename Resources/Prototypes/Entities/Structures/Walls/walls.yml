@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseStructure
   id: BaseStructureWall
-  name: basestructurewall
+  name: basewall
   description: Keeps the air in and the greytide out.
   placement:
     mode: SnapgridCenter
@@ -56,9 +56,8 @@
   abstract: true
   parent: BaseStructureWall
   id: BaseWall
-  name: basewall
   components:
-  - type: Occluder
+  - type: Occluder # Breaks on diagonal walls
 
 - type: entity
   abstract: true
@@ -99,9 +98,9 @@
   name: brick wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/brick.rsi
+    sprite: _Shiptest/Structures/Walls/cobblebrick.rsi
   - type: Icon
-    sprite: Structures/Walls/brick.rsi
+    sprite: _Shiptest/Structures/Walls/cobblebrick.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -121,7 +120,7 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
-    base: brick
+    base: cobblebrick
 
 - type: entity
   parent: BaseWall
@@ -236,9 +235,9 @@
   name: cult wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/cult.rsi
+    sprite: _Shiptest/Structures/Walls/necropolis.rsi
   - type: Icon
-    sprite: Structures/Walls/cult.rsi
+    sprite: _Shiptest/Structures/Walls/necropolis.rsi
   - type: Destructible
     thresholds:
     - trigger:
@@ -254,7 +253,7 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
-    base: cult
+    base: necropolis
 
 - type: entity
   parent: BaseWall
@@ -697,10 +696,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonals/reinforced_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/reinforced_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonals/reinforced_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/reinforced_diagonal.rsi
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -768,9 +767,9 @@
   name: sandstone wall
   components:
   - type: Sprite
-    sprite: _Shiptest/Structures/Walls/sandstone.rsi
+    sprite: _Shiptest/Structures/Walls/cobblebrick_sand.rsi
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/sandstone.rsi
+    sprite: _Shiptest/Structures/Walls/cobblebrick_sand.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -790,7 +789,7 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: walls
-    base: sandstone
+    base: cobblebrick
 
 - type: entity
   parent: BaseWall
@@ -842,10 +841,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonals/shuttle_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/shuttle_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonals/shuttle_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/shuttle_diagonal.rsi
     state: state0
   - type: Reflect
     reflectProb: 1
@@ -1023,10 +1022,10 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonals/solid_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/solid_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonals/solid_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/solid_diagonal.rsi
     state: state0
   - type: Destructible
     thresholds:
@@ -1089,6 +1088,109 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+
+- type: entity
+  parent: BaseWall
+  id: WallSolidChitin
+  name: solid chitin
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Sprite
+    sprite: Structures/Walls/xeno.rsi
+  - type: Icon
+    sprite: Structures/Walls/xeno.rsi
+  - type: IconSmooth
+    key: chitin
+    base: solid
+  - type: Construction
+    graph: Girder
+    node: wallChitin
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+
+- type: entity
+  parent: BaseWall
+  id: WallReinforcedChitin
+  name: reinforced chitin
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/xeno.rsi
+  - type: Icon
+    sprite: Structures/Walls/xeno.rsi
+    state: rgeneric
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ReinforcedWallVisuals.DeconstructionStage:
+        ReinforcedWallVisualLayers.Deconstruction:
+          -1: { visible: false }
+          0: { state: reinf_construct-0, visible: true}
+          1: { state: reinf_construct-1, visible: true}
+          2: { state: reinf_construct-2, visible: true}
+          3: { state: reinf_construct-3, visible: true}
+          4: { state: reinf_construct-4, visible: true}
+          5: { state: reinf_construct-5, visible: true}
+  - type: StaticPrice
+    price: 250
+  - type: RadiationBlocker
+    resistance: 5
+  - type: IconSmooth
+    key: chitin
+    base: reinf_over
+  - type: Construction
+    graph: Girder
+    node: reinforcedWallChitin
 
 - type: entity
   parent: BaseWall
@@ -1257,7 +1359,10 @@
   parent: BaseWall
   id: WallMining
   name: mining wall
+  description: Rugged and heat-resistant. #imp
   components:
+  - type: StaticPrice # imp
+    price: 400
   - type: Sprite
     sprite: _Shiptest/Structures/Walls/mining.rsi
   - type: Icon
@@ -1273,6 +1378,9 @@
   - type: IconSmooth
     key: walls
     base: mining
+  - type: Construction #imp
+    graph: Girder
+    node: miningWall
   - type: RandomIconSmooth
     randomStates:
     - mining
@@ -1281,15 +1389,19 @@
 
 - type: entity
   parent: WallDiagonalBase
+  description: Rugged and heat-resistant. #imp
   id: WallMiningDiagonal
   name: mining wall
   components:
+  - type: Construction #imp
+    graph: Girder
+    node: diagonalMiningWall
   - type: Sprite
     drawdepth: Walls
-    sprite: _Shiptest/Structures/Walls/Diagonals/mining_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/mining_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: _Shiptest/Structures/Walls/Diagonals/mining_diagonal.rsi
+    sprite: _Shiptest/Structures/Walls/Diagonal/mining_diagonal.rsi
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -1319,6 +1431,9 @@
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: StaticPrice # imp arbitrage
+    price: 295
+
 
 
 # Vault Walls
@@ -1411,9 +1526,9 @@
           !type:PhysShapeAabb
           bounds: "-0.5,-0.5,0.5,0.5"
         mask:
-        - FullTileMask
+        - SpecialWallLayer
         layer:
-        - GlassLayer
+        - SpecialWallLayer
   - type: Airtight
   - type: Sprite
     sprite: Structures/Magic/forcewall.rsi
@@ -1526,106 +1641,3 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
-
-- type: entity
-  parent: BaseWall
-  id: WallSolidChitin
-  name: solid chitin
-  components:
-  - type: Tag
-    tags:
-      - Wall
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Sprite
-    sprite: Structures/Walls/xeno.rsi
-  - type: Icon
-    sprite: Structures/Walls/xeno.rsi
-  - type: IconSmooth
-    key: chitin
-    base: solid
-  - type: Construction
-    graph: Girder
-    node: wallChitin
-  - type: RCDDeconstructable
-    cost: 6
-    delay: 8
-    fx: EffectRCDDeconstruct8
-
-- type: entity
-  parent: BaseWall
-  id: WallReinforcedChitin
-  name: reinforced chitin
-  components:
-  - type: Sprite
-    sprite: Structures/Walls/xeno.rsi
-  - type: Icon
-    sprite: Structures/Walls/xeno.rsi
-    state: rgeneric
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallicStrong
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 600
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-    - trigger:
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.ReinforcedWallVisuals.DeconstructionStage:
-        ReinforcedWallVisualLayers.Deconstruction:
-          -1: { visible: false }
-          0: { state: reinf_construct-0, visible: true}
-          1: { state: reinf_construct-1, visible: true}
-          2: { state: reinf_construct-2, visible: true}
-          3: { state: reinf_construct-3, visible: true}
-          4: { state: reinf_construct-4, visible: true}
-          5: { state: reinf_construct-5, visible: true}
-  - type: StaticPrice
-    price: 250
-  - type: RadiationBlocker
-    resistance: 5
-  - type: IconSmooth
-    key: chitin
-    base: reinf_over
-  - type: Construction
-    graph: Girder
-    node: reinforcedWallChitin
