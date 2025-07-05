@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.2.0
   forkId: ""
   forkVersion: ""
-  time: 07/05/2025 00:41:20
+  time: 07/05/2025 00:43:18
   entityCount: 2662
 maps:
 - 1
@@ -1705,7 +1705,7 @@ entities:
       pos: 7.5,19.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -2960.4172
+      secondsUntilStateChange: -3077.6472
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -13076,12 +13076,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 7.5,-0.5
       parent: 2
-  - uid: 1506
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 10.5,-4.5
-      parent: 2
   - uid: 1873
     components:
     - type: Transform
@@ -13335,6 +13329,12 @@ entities:
     components:
     - type: Transform
       pos: -1.5,-15.5
+      parent: 2
+  - uid: 1927
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 10.5,-4.5
       parent: 2
 - proto: PoweredlightCyan
   entities:
@@ -15599,6 +15599,12 @@ entities:
     - type: Transform
       pos: 2.5,-0.5
       parent: 2
+  - uid: 1506
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 20.5,-5.5
+      parent: 2
   - uid: 1717
     components:
     - type: Transform
@@ -16823,6 +16829,12 @@ entities:
     - type: Transform
       pos: -3.5,-14.5
       parent: 2
+  - uid: 2547
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,-5.5
+      parent: 2
 - proto: WallShuttleDiagonal
   entities:
   - uid: 1724
@@ -16940,12 +16952,6 @@ entities:
     - type: Transform
       pos: -4.5,13.5
       parent: 2
-  - uid: 2547
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-5.5
-      parent: 2
   - uid: 2548
     components:
     - type: Transform
@@ -16992,12 +16998,6 @@ entities:
     components:
     - type: Transform
       pos: -7.5,12.5
-      parent: 2
-  - uid: 2595
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 21.5,-5.5
       parent: 2
 - proto: WallWeaponCapacitorRecharger
   entities:
