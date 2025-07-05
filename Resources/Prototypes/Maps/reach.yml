@@ -1,7 +1,7 @@
 - type: gameMap
   id: Reach
   mapName: 'Reach'
-  mapPath: /Maps/_Impstation/reach.yml
+  mapPath: /Maps/_hereelabs/reach.yml
   minPlayers: 0
   maxPlayers: 7
   stations:
