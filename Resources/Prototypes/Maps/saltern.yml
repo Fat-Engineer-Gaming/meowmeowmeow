@@ -4,7 +4,6 @@
   mapPath: /Maps/_hereelabs/saltern.yml
   minPlayers: 1
   maxPlayers: 35
-  fallback: true
   stations:
     Saltern:
       stationProto: StandardNanotrasenStation
