@@ -1,0 +1,16 @@
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockExternal
+  suffix: External
+  description: "It opens, it closes, it might crush you, and there might be only space behind it.\nHas to be manually activated."
+  components:
+  - type: Door
+    BumpOpen: false
+    openSound:
+      path: /Audio/_Ancient/Machines/airlock_ext_open.ogg
+    closeSound:
+      path: /Audio/_Ancient/Machines/airlock_ext_close.ogg
+    denySound:
+      path: /Audio/_Ancient/Machines/airlock_deny.ogg
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/external.rsi

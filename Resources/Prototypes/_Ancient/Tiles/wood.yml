@@ -1,0 +1,13 @@
+- type: tile
+  id: Ancient_FloorWood
+  name: Wood
+  sprite: /Textures/_Ancient/Tiles/wood.png
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWood
+  heatCapacity: 10000
