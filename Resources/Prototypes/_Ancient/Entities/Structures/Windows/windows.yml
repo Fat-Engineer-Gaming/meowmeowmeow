@@ -210,3 +210,272 @@
     price: 100
   - type: RadiationBlocker
     resistance: 2
+    
+    
+# OpenSS13
+
+- type: entity
+  id: Ancient_ClassicWindow
+  parent: BaseStructure
+  name: window
+  suffix: Classic, Ancient
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmack
+  - type: WallMount
+    arc: 360 # interact despite grilles
+  - type: Tag
+    tags:
+      - ForceFixRotations
+      - Window
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _Ancient/Structures/Windows/ancient_window.rsi
+    state: windowfull
+  - type: Icon
+    sprite: _Ancient/Structures/Windows/ancient_window.rsi
+    state: windowfull
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Glass
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 4
+    fx: EffectRCDDeconstruct4
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlass:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Airtight
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+    interactDelay: 2.5 #imp edit, help sensory issues
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 2
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks.rsi
+  - type: StaticPrice
+    price: 100
+  - type: BlockWeather
+      
+
+- type: entity
+  id: Ancient_ClassicReinforcedWindow
+  parent: BaseStructure
+  name: reinforced window
+  suffix: Classic, Ancient
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmack
+  - type: WallMount
+    arc: 360 # interact despite grilles
+  - type: Tag
+    tags:
+      - ForceFixRotations
+      - Window
+  - type: Sprite
+    drawdepth: WallTops
+    sprite: _Ancient/Structures/Windows/ancient_reinforced_window.rsi
+    state: windowfull
+  - type: Icon
+    sprite: _Ancient/Structures/Windows/ancient_reinforced_window.rsi
+    state: windowfull
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb {}
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Glass
+  - type: ExaminableDamage
+    messages: WindowMessages
+  - type: Repairable
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 4
+    fx: EffectRCDDeconstruct4
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassReinforced:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Airtight
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+    interactDelay: 2.5 #imp edit, help sensory issues
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 2
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks.rsi
+  - type: StaticPrice
+    price: 100
+  - type: BlockWeather
+      
+# Directional
+
+- type: entity
+  id: Ancient_ClassicWindowDirectional
+  parent: WindowDirectional
+  name: directional window
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Windows/ancient_window.rsi
+    state: window
+  - type: Icon
+    sprite: _Ancient/Structures/Windows/ancient_window.rsi
+    state: window
+  - type: StaticPrice
+    price: 35
+
+- type: entity
+  id: Ancient_ClassicWindowDirectionalReinforced
+  parent: WindowDirectional
+  name: directional reinforced window
+  description: Don't smudge up the glass down there.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Window
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Windows/ancient_reinforced_window.rsi
+    state: window
+  - type: Icon
+    sprite: _Ancient/Structures/Windows/ancient_reinforced_window.rsi
+    state: window
+  - type: Construction
+    graph: WindowDirectional
+    node: windowReinforcedDirectional
+  - type: Appearance
+  - type: DamageVisuals
+    thresholds: [5, 10, 20]
+    damageDivisor: 1.5
+    trackAllDamage: true
+    damageOverlay:
+      sprite: Structures/Windows/cracks_directional.rsi
+  - type: Damageable
+    damageModifierSet: RGlass
+  - type: RCDDeconstructable
+    cost: 4
+    delay: 4
+    fx: EffectRCDDeconstruct4
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+    - trigger:
+        !type:DamageTrigger
+        damage: 37
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WindowShatter
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlassReinforced:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: StaticPrice
+    price: 22.5

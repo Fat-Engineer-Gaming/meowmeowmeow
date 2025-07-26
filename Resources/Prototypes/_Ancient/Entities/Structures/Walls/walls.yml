@@ -44,6 +44,253 @@
     
 - type: entity
   parent: BaseWall
+  id: Ancient_ClassicWallSolid
+  name: solid wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallsolid
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallsolid
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        
+- type: entity
+  parent: BaseWall
+  id: Ancient_ClassicWallReinforced
+  name: reinforced wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallreinforced
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallreinforced
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ReinforcedWallReplacementMarker
+  - type: StaticPrice
+    price: 250
+  - type: RadiationBlocker
+    resistance: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    
+    
+- type: entity
+  parent: BaseWall
+  id: Ancient_ClassicWallShuttleRed
+  name: red shuttle wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallred
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wallred
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        
+- type: entity
+  parent: BaseWall
+  id: Ancient_ClassicWallShuttle
+  name: shuttle wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wall
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: wall
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ReinforcedWallReplacementMarker
+  - type: StaticPrice
+    price: 250
+  - type: RadiationBlocker
+    resistance: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        
+- type: entity
+  parent: BaseWall
+  id: Ancient_ClassicWallShuttleDiag
+  name: diagonal shuttle wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    snapCardinals: false
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: diagonalWall
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/ancient_walls.rsi
+    state: diagonalWall
+  - type: Occluder
+    Enabled: false
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ReinforcedWallReplacementMarker
+  - type: StaticPrice
+    price: 250
+  - type: RadiationBlocker
+    resistance: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    
+- type: entity
+  parent: BaseWall
   id: Ancient_WallReinforced
   name: reinforced wall
   suffix: Ancient

@@ -1,3 +1,5 @@
+# Old SS14 Tileset
+
 - type: tile
   id: Ancient_FloorDark
   name: Dark floor
@@ -323,3 +325,101 @@
   footstepSounds:
     collection: FootstepFloor
   friction: 5
+
+# OpenSS13 Tileset
+
+- type: tile
+  id: Ancient_ClassicFloorDark
+  name: Dark Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/dark.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_ClassicFloor
+  name: Tile Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/tile.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: Ancient_ClassicFloorOld
+  name: Tile Floor (old)
+  sprite: /Textures/_Ancient/Tiles/SS13/old.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: Ancient_ClassicFloorWhite
+  name: White Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/white.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_ClassicFloorDamaged
+  name: Damaged Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/damaged.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_ClassicFloorShuttleWhite
+  name: Shuttle White Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/shuttle_white.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_ClassicFloorShuttleYellow
+  name: Shuttle Yellow Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/shuttle_yellow.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_ClassicFloorShuttleBlue
+  name: Shuttle Blue Floor
+  sprite: /Textures/_Ancient/Tiles/SS13/shuttle_blue.png
+  baseTurf: Ancient_ClassicPlating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
