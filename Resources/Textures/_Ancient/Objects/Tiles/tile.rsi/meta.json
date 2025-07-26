@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "dark"
+    },
+    {
+      "name": "dirty"
+    },
+    {
+      "name": "gcircuit"
+    },
+    {
+      "name": "hydro"
+    },
+    {
+      "name": "plating"
+    },
+    {
+      "name": "reinforced"
+    },
+    {
+      "name": "rockvault"
+    },
+    {
+      "name": "gold"
+    },
+    {
+      "name": "showroom"
+    },
+    {
+      "name": "snow"
+    },
+    {
+      "name": "steel"
+    },
+    {
+      "name": "steel_techfloor_grid"
+    },
+    {
+      "name": "dark_techfloor_grid"
+    },
+    {
+      "name": "white"
+    },
+    {
+      "name": "white_monofloor"
+    },
+    {
+      "name": "wood"
+    },
+    {
+      "name": "carpet"
+    },
+    {
+      "name": "brown-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "brown-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "carpet-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "carpet-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "dark-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "dark-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "gcircuit-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "gcircuit-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "gold-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "gold-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "reinforced-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "reinforced-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "showroom-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "showroom-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "silver-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "silver-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "white-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "white-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "wood-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "wood-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "steel-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "steel-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "hydro-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "hydro-inhand-left",
+      "directions": 4
+    },
+  ]
+}

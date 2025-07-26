@@ -1,0 +1,325 @@
+- type: tile
+  id: Ancient_FloorDark
+  name: Dark floor
+  sprite: /Textures/_Ancient/Tiles/dark.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDark
+
+- type: tile
+  id: Ancient_FloorElevatorShaft
+  name: Elevator shaft
+  sprite: /Textures/_Ancient/Tiles/elevator_shaft.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorFreezer
+  name: Freezer
+  sprite: /Textures/_Ancient/Tiles/freezer.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemFreezer
+
+- type: tile
+  id: Ancient_FloorHydro
+  name: Hydro floor
+  sprite: /Textures/_Ancient/Tiles/hydro.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorGreenCircuit
+  name: Green circuit floor
+  sprite: /Textures/_Ancient/Tiles/green_circuit.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemGCircuit
+
+- type: tile
+  id: Ancient_FloorLino
+  name: Linoleum floor
+  sprite: /Textures/_Ancient/Tiles/lino.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemLino
+
+- type: tile
+  id: Ancient_FloorMono
+  name: Mono floor
+  sprite: /Textures/_Ancient/Tiles/mono.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemMono
+
+- type: tile
+  id: Ancient_FloorReinforced
+  name: Reinforced floor
+  sprite: /Textures/_Ancient/Tiles/reinforced.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: PartRodMetal1
+
+- type: tile
+  id: Ancient_FloorRockVault
+  name: rock floor
+  sprite: /Textures/_Ancient/Tiles/rock_vault.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorShowroom
+  name: Showroom floor
+  sprite: /Textures/_Ancient/Tiles/showroom.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemShowroom
+
+- type: tile
+  id: Ancient_FloorSteel
+  name: Steel floor
+  sprite: /Textures/_Ancient/Tiles/steel.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: Ancient_FloorSteelDirty
+  name: Dirty steel floor
+  sprite: /Textures/_Ancient/Tiles/steel_dirty.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemDirty
+
+- type: tile
+  id: Ancient_FloorTechMaint
+  name: Techmaint Floor
+  sprite: /Textures/_Ancient/Tiles/tech_maint.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemTechmaint
+
+- type: tile
+  id: Ancient_FloorWhite
+  name: White Floor
+  sprite: /Textures/_Ancient/Tiles/white.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemWhite
+
+- type: tile
+  id: Ancient_FloorAsteroidSand
+  name: Asteroid Floor
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_sand.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+- type: tile
+  id: Ancient_FloorAsteroidTile
+  name: Asteroid Tile
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_tile.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  
+- type: tile
+  id: Ancient_FloorAsteroidCourseSand0
+  name: Asteroid Coarse Sand 0
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_coarse_sand0.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorAsteroidCoarseSand1
+  name: Asteroid Coarse Sand 1
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_coarse_sand1.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  
+- type: tile
+  id: Ancient_FloorAsteroidCoarseSand2
+  name: Asteroid Coarse Sand 2
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_coarse_sand2.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorAsteroidCoarseSandDug
+  name: Asteroid Dug Coarse Sand
+  sprite: /Textures/_Ancient/Tiles/Asteroid/asteroid_coarse_sand_dug.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorSnow
+  name: Snow
+  sprite: /Textures/_Ancient/Tiles/snow.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorGold
+  name: Gold Tile
+  sprite: /Textures/_Ancient/Tiles/gold.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemGold
+
+- type: tile
+  id: Ancient_FloorGlass
+  name: glass floor
+  sprite: /Textures/_Ancient/Tiles/glass.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: SheetGlass1
+
+- type: tile
+  id: Ancient_FloorRGlass
+  name: reinforced glass floor
+  sprite: /Textures/_Ancient/Tiles/rglass.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: SheetRGlass1
+
+- type: tile
+  id: Ancient_FloorWarning1
+  name: Warning Tile
+  sprite: /Textures/_Ancient/Tiles/steel_warning1.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorWarning2
+  name: Beware Tile
+  sprite: /Textures/_Ancient/Tiles/steel_warning2.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorWhiteWarning1
+  name: White Warning Tile
+  sprite: /Textures/_Ancient/Tiles/white_warning1.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorWhiteWarning2
+  name: White Beware Tile
+  sprite: /Textures/_Ancient/Tiles/white_warning2.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+
+- type: tile
+  id: Ancient_FloorBlue
+  name: Blue Tile
+  sprite: /Textures/_Ancient/Tiles/blue.png
+  baseTurf: Ancient_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5

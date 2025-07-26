@@ -1,0 +1,157 @@
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockFreezer
+  suffix: Freezer
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/freezer.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockEngineering
+  suffix: Engineering
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/engineering.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockCargo
+  suffix: Cargo
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/cargo.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockMedical
+  suffix: Medical
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/medical.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockScience
+  suffix: Science
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/science.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockCommand
+  suffix: Command
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/command.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockSecurity
+  suffix: Security
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/security.rsi
+
+- type: entity
+  parent: Ancient_Airlock
+  id: Ancient_AirlockMaint
+  name: maintenance hatch
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Standard/maint.rsi
+
+# Glass
+
+- type: entity
+  id: Ancient_AirlockGlass
+  parent: Ancient_Airlock
+  name: glass airlock
+  suffix: Ancient
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmack
+  - type: Door
+    occludes: false
+  - type: Occluder
+    enabled: false
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/glass.rsi
+    snapCardinals: true
+  - type: AnimationPlayer
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
+        - GlassAirlockLayer
+  - type: LayerChangeOnWeld
+    unWeldedLayer: GlassAirlockLayer
+    weldedLayer: GlassLayer
+  - type: Construction
+    graph: Airlock
+    node: glassAirlock
+  - type: PaintableAirlock
+    group: Glass
+  - type: RadiationBlocker
+    resistance: 2
+  - type: Tag
+    tags:
+      - GlassAirlock
+      # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockEngineeringGlass
+  suffix: Engineering
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/engineering.rsi
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockCargoGlass
+  suffix: Cargo
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/cargo.rsi
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockMedicalGlass
+  suffix: Medical
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/medical.rsi
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockScienceGlass
+  suffix: Science
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/science.rsi
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockCommandGlass
+  suffix: Command
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/command.rsi
+
+- type: entity
+  parent: Ancient_AirlockGlass
+  id: Ancient_AirlockSecurityGlass
+  suffix: Security
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/Airlocks/Glass/security.rsi
