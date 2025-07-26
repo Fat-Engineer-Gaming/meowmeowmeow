@@ -73,6 +73,16 @@
   loadouts:
   - LoadoutTankHarnessAquaticCommandWithOuterwear
 
+# breath tool
+- type: loadoutGroup
+  id: GroupSpeciesBreathToolCommand
+  name: loadout-group-breath-tool-command
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesBreathToolCommand
+
 # vaporizer
 - type: loadoutGroup
   id: GroupBreathToolDecapoid
@@ -680,15 +690,6 @@
   minLimit: 0
   loadouts:
   - MusicianShako
-
-- type: loadoutGroup
-  id: ReporterJumpsuit
-  name: loadout-group-reporter-jumpsuit
-  loadouts:
-  - ReporterJumpsuit
-  - JournalistJumpsuit
-  - ClothingUniformBrosBlazer
-  - ClothingUniformBrosBlazerSkirt
 
 - type: loadoutGroup
   id: ReporterNeck
