@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "license": "CC-LGPL-3.0",
+  "copyright": "https://github.com/MarkSuckerberg/OpenSS13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "generic",
+      "directions": 1
+    },
+    {
+      "name": "generic_door",
+      "directions": 1
+    },
+    {
+      "name": "generic_open",
+      "directions": 1
+    },
+    {
+      "name": "generic_icon",
+      "directions": 1
+    },
+    {
+      "name": "welded",
+      "directions": 1
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+- type: entity
+  id: Ancient_Table
+  parent: TableBase
+  name: table
+  description: Not implemented
+  suffix: Ancient
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/Tables/generic.rsi
+  - type: Icon
+    sprite: _Ancient/Structures/Furniture/Tables/generic.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 125
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 25
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: metaltable
+    base: state_
+  - type: Tag # goob edit
+    tags:
+    - Table
