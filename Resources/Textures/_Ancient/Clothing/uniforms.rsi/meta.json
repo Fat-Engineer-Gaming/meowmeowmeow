@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blue_s"
+    },
+    {
+      "name": "blue_l"
+    },
+    {
+      "name": "maroon_s"
+    },
+    {
+      "name": "maroon_l"
+    },
+    {
+      "name": "red_s"
+    },
+    {
+      "name": "red_l"
+    },
+    {
+      "name": "black_s"
+    },
+    {
+      "name": "black_l"
+    },
+    {
+      "name": "white_s"
+    },
+    {
+      "name": "white_l"
+    },
+    {
+      "name": "yellow_s"
+    },
+    {
+      "name": "yellow_l"
+    },
+    {
+      "name": "aqua_s"
+    },
+    {
+      "name": "aqua_l"
+    },
+    {
+      "name": "lightpurple_s"
+    },
+    {
+      "name": "lightpurple_l"
+    },
+    {
+      "name": "purple_s"
+    },
+    {
+      "name": "purple_l"
+    },
+    {
+      "name": "orange_s"
+    },
+    {
+      "name": "orange_l"
+    },
+    {
+      "name": "pink_s"
+    },
+    {
+      "name": "pink_l"
+    },
+    {
+      "name": "lightgreen_s"
+    },
+    {
+      "name": "lightgreen_l"
+    },
+    {
+      "name": "lightblue_s"
+    },
+    {
+      "name": "lightblue_l"
+    },
+    {
+      "name": "green_s"
+    },
+    {
+      "name": "green_l"
+    },
+    {
+      "name": "lightbrown_s"
+    },
+    {
+      "name": "lightbrown_l"
+    },
+    {
+      "name": "brown_s"
+    },
+    {
+      "name": "brown_l"
+    },
+    {
+      "name": "yellowgreen_s"
+    },
+    {
+      "name": "yellowgreen_l"
+    },
+    {
+      "name": "darkblue_s"
+    },
+    {
+      "name": "darkblue_l"
+    },
+    {
+      "name": "lightred_s"
+    },
+    {
+      "name": "lightred_l"
+    },
+    {
+      "name": "darkred_s"
+    },
+    {
+      "name": "darkred_l"
+    },
+    {
+      "name": "darkgreen_s"
+    },
+    {
+      "name": "darkgreen_l"
+    },
+    {
+      "name": "grey_s"
+    },
+    {
+      "name": "grey_l"
+    },
+    {
+      "name": "engineyellow_s"
+    },
+    {
+      "name": "engineyellow_l"
+    },
+    {
+      "name": "atmosyellow_s"
+    },
+    {
+      "name": "atmosyellow_l"
+    },
+    {
+      "name": "hopgreen_s"
+    },
+    {
+      "name": "hopgreen_l"
+    },
+    {
+      "name": "horgreen_s"
+    },
+    {
+      "name": "horgreen_l"
+    },
+    {
+      "name": "toxinswhite_s"
+    },
+    {
+      "name": "toxinswhite_l"
+    },
+    {
+      "name": "chapblack_s"
+    },
+    {
+      "name": "chapblack_l"
+    },
+    {
+      "name": "geneticswhite_s"
+    },
+    {
+      "name": "geneticswhite_l"
+    },
+    {
+      "name": "forensicsred_s"
+    },
+    {
+      "name": "forensicsred_l"
+    },
+    {
+      "name": "ba_suit_l"
+    },
+    {
+      "name": "ba_suit_s"
+    },
+    {
+      "name": "sl_suit_s"
+    },
+    {
+      "name": "sl_suit_l"
+    },
+    {
+      "name": "rainbow_s"
+    },
+    {
+      "name": "rainbow_l"
+    },
+    {
+      "name": "cloud_s"
+    },
+    {
+      "name": "yay_s"
+    },
+    {
+      "name": "cloud_l"
+    },
+    {
+      "name": "yay_l"
+    },
+    {
+      "name": "janitor_s"
+    },
+    {
+      "name": "janitor_l"
+    }
+  ]
+}

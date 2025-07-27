@@ -1,0 +1,182 @@
+# not making all those subdirs no way
+
+- type: entity
+  name: chair
+  id: Ancient_ClassicChair
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/SS13/stationobjs.rsi
+    state: chair
+
+- type: entity
+  name: stool
+  id: Ancient_ClassicStool
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/SS13/stationobjs.rsi
+    state: stool
+
+- type: entity
+  name: stool
+  id: Ancient_ClassicBench
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/SS13/stationobjs.rsi
+    state: bench
+    
+- type: entity
+  name: bed
+  id: Ancient_ClassicBed
+  parent: Bed
+  description: This is used to lie in, sleep in or strap on. Resting here provides extremely slow healing.
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/SS13/stationobjs.rsi
+    state: bed
+
+- type: entity
+  id: Ancient_ClassicBedsheet
+  parent: BedsheetBase
+  name: bedsheet
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/SS13/stationobjs.rsi
+    state: sheet
+    
+- type: entity
+  id: Ancient_ClassicClosetSteel
+  parent: ClosetBase
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _Ancient/Structures/Furniture/SS13/closet.rsi
+    layers:
+    - state: generic
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: generic_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: _Ancient/Structures/Furniture/SS13/closet.rsi 
+    state: generic_icon
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 15
+    staminaCost: 50
+    
+- type: entity
+  parent: BaseStructureComputer
+  id: Ancient_ClassicComputer
+  name: computer
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Animateable
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Computer
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Ancient/Structures/Furniture/SS13/basiccomputer.rsi # use base directory for screen and keys (unless we've resprited them), use imp directory for body, keyboard, and panel
+    layers:
+    - map: ["computerLayerBody"]
+      state: base
+      sprite: _Ancient/Structures/Furniture/SS13/basiccomputer.rsi # imp
+    - map: ["computerLayerScreen"]
+      state: overlay
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ComputerVisuals.Powered:
+        computerLayerScreen:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
+  - type: LitOnPowered
+  - type: PointLight
+    color: "#5C95FFFF" #imp
+    radius: 2.4 #imp
+    energy: 1.6
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.4" # shine from the top, not bottom of the computer
+    castShadows: false
+    
+- type: entity
+  id: Ancient_ClassicGrille
+  parent: Grille
+  name: grille
+  description: A flimsy framework of iron rods assembled in an ancient fashion.
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _Ancient/Structures/Walls/grille.rsi
+    state: grille
+    layers:
+      - state: grille
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/grille.rsi
+    state: grille
+    
+- type: entity
+  name: ancient human
+  id: Ancient_MobHuman
+  parent: [SimpleMobBase, StripableInventoryBase]
+  description: A human of some kind. Did humans really look like this in the past?!?!
+  components:
+  - type: CombatMode
+  - type: Inventory
+    templateId: human
+    speciesId: human
+  - type: Blindable
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Stripping
+  - type: Sprite
+    snapCardinals: true
+    drawdepth: Mobs
+    sprite: _Ancient/Mobs/simplehuman.rsi
+    state: alive
+    layers:
+    - map: [ "jumpsuit" ]
+    - map: [ "ears" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+  - type: Hands
+  - type: ComplexInteraction
+  - type: Puller
+    needsHands: true
+  - type: IdExaminable
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - AnomalyHost
+    - CanPilot
+  - type: LayingDown

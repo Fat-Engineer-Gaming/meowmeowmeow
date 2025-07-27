@@ -16,6 +16,14 @@
       "directions": 4
     },
     {
+      "name": "welded",
+      "directions": 4
+    },
+    {
+      "name": "panel_open",
+      "directions": 4
+    },
+    {
       "name": "open_unlit",
       "directions": 4
     },

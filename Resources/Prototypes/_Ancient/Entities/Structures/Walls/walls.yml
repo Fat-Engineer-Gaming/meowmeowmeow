@@ -49,6 +49,7 @@
   suffix: Classic, Ancient
   components:
   - type: Sprite
+    snapCardinals: true
     sprite: _Ancient/Structures/Walls/ancient_walls.rsi
     state: wallsolid
   - type: Icon
@@ -88,6 +89,7 @@
   suffix: Classic, Ancient
   components:
   - type: Sprite
+    snapCardinals: true
     sprite: _Ancient/Structures/Walls/ancient_walls.rsi
     state: wallreinforced
   - type: Icon
@@ -144,6 +146,7 @@
   suffix: Classic, Ancient
   components:
   - type: Sprite
+    snapCardinals: true
     sprite: _Ancient/Structures/Walls/ancient_walls.rsi
     state: wallred
   - type: Icon
@@ -183,6 +186,7 @@
   suffix: Classic, Ancient
   components:
   - type: Sprite
+    snapCardinals: true
     sprite: _Ancient/Structures/Walls/ancient_walls.rsi
     state: wall
   - type: Icon
@@ -232,7 +236,7 @@
         acts: ["Destruction"]
         
 - type: entity
-  parent: BaseWall
+  parent: WallDiagonalBase
   id: Ancient_ClassicWallShuttleDiag
   name: diagonal shuttle wall
   suffix: Classic, Ancient
@@ -244,8 +248,6 @@
   - type: Icon
     sprite: _Ancient/Structures/Walls/ancient_walls.rsi
     state: diagonalWall
-  - type: Occluder
-    Enabled: false
   - type: RCDDeconstructable
     cost: 6
     delay: 8
