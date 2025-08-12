@@ -467,6 +467,7 @@
     - Wirecutter
     - WelderIndustrial
     - Multitool
+    - SprayPainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
 
@@ -565,6 +566,7 @@
     - WelderExperimental
     - Multitool
     - RemoteSignallerAdvanced
+    - Spraypainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-tools-module }
 
@@ -652,7 +654,7 @@
   id: BorgModuleAdvancedCleaning
   parent: [ BaseBorgModuleJanitor, BaseProviderBorgModule ]
   name: advanced cleaning cyborg module
-  description: Advanced janitorial module containing, well... advanced janitor equipment. What were you expecting?
+  description: Advanced janitorial module containing the key for a Cyborg to become the prime of janitorial work.
   components:
   - type: Sprite
     layers:
