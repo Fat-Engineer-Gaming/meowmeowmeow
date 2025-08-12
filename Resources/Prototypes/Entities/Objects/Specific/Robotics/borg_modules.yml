@@ -508,6 +508,7 @@
     - MineralScannerUnpowered
     - BorgOreBag
     - RadioHandheld # imp
+    - WeaponProtoKineticAccelerator
   - type: BorgModuleIcon
     icon: { sprite: _Impstation/Interface/Actions/actions_borg.rsi, state: mining-module } #imp edit
 
@@ -515,7 +516,7 @@
   id: BorgModuleAdvancedMining
   parent: [ BaseBorgModuleCargo, BaseProviderBorgModule ]
   name: advanced mining cyborg module
-  description: Advanced cargo module containing advanced mining equipment. Studies show it advances productivity of a cyborg by 150%.
+  description: Advanced cargo module containing advanced mining equipment. Studies show it advances productivity of a cyborg by 150%, by not only upgrading their gear, but giving them TWO guns.
   components:
   - type: Sprite
     layers:
@@ -527,6 +528,8 @@
     - Shovel
     - AdvancedMineralScannerUnpowered
     - OreBagOfHolding
+    - WeaponProtoKineticAccelerator
+    - WeaponProtoKineticAccelerator
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-mining-module }
 
