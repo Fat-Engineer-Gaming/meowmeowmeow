@@ -52,7 +52,7 @@
             MedicalDoctor: [ 1, 1 ]
             MedicalIntern: [ 1, 1 ]
             # science
-            Borg: [ -1, -1 ]
+            Borg: [ 1, 1 ]
             ResearchAssistant: [ 1, 1 ]
             Scientist: [ 1, 1 ]
             StationAi: [1, 1]

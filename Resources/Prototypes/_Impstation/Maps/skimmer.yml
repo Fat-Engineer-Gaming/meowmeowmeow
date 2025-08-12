@@ -33,7 +33,7 @@
             MedicalDoctor: [ 1, 1 ]
             # science - 2
             Scientist: [ 1, 1 ]
-            Borg: [ -1, -1 ]
+            Borg: [ 1, 1 ]
             # security - 1
             SecurityOfficer: [ 1, 1 ]
             # supply - 3-4. wolfie...

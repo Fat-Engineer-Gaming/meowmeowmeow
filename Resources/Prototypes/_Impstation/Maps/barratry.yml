@@ -50,7 +50,7 @@
             MedicalIntern: [ 2, 4 ]
             Paramedic: [ 1, 1 ]
             # science - 8-9
-            Borg: [ -1, -1 ]
+            Borg: [ 2, 2 ]
             ResearchAssistant: [ 1, 1]
             Scientist: [ 5, 5 ]
             StationAi: [ 1, 1 ]
