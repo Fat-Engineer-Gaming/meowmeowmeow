@@ -19,7 +19,7 @@
           path: /Maps/_Impstation/Shuttles/cargo.yml
         - type: StationJobs
           availableJobs: # total jobs: 61
-            # command - 8 jobs 
+            # command - 8 jobs
             Captain: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
             ChiefEngineer: [ 1, 1 ]
@@ -52,7 +52,7 @@
             MedicalDoctor: [ 3, 3 ]
             MedicalIntern: [ 1, 1 ]
             # science - 7 jobs
-            Borg: [ 2, 2 ]
+            Borg: [ -1, -1 ]
             ResearchAssistant: [ 1, 1 ]
             Scientist: [ 3, 3 ]
             StationAi: [ 1, 1 ]

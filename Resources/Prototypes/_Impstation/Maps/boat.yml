@@ -52,7 +52,7 @@
             Paramedic: [ 1, 1 ]
             Psychologist: [ 1, 1 ]
             # science - 8-9
-            Borg: [ 4, 4 ]
+            Borg: [ -1, -1 ]
             ResearchAssistant: [ 1, 1 ]
             Scientist: [ 3, 3 ]
             StationAi: [ 1, 1 ]
