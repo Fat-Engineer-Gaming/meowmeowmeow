@@ -10,3 +10,8 @@ chat-speech-verb-harpy-1 = chirps
 chat-speech-verb-harpy-2 = tweets
 chat-speech-verb-harpy-3 = caws
 chat-speech-verb-harpy-4 = trills
+
+chat-speech-verb-name-echo = Echo
+chat-speech-verb-echo-1 = echoes
+chat-speech-verb-echo-2 = mimics
+chat-speech-verb-echo-3 = repeats

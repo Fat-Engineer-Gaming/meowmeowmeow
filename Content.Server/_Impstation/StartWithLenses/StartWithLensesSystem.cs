@@ -29,14 +29,29 @@ public sealed class StartWithLensesSystem : EntitySystem
         if (!_inventorySystem.TryGetSlot(ent, "eyes", out var slot))
             return;
 
-        var eyes = _inventorySystem.GetHandOrInventoryEntities(ent.Owner, SlotFlags.EYES).First();
+        var eyeSet = _inventorySystem.GetHandOrInventoryEntities(ent.Owner, SlotFlags.EYES);
+
+        if (!eyeSet.Any())
+        {
+            _inventorySystem.SpawnItemInSlot(ent, "eyes", ent.Comp.LensPrototype);
+            return;
+        }
+
+        var eyes = eyeSet.First();
 
         if (TryComp<LensSlotComponent>(eyes, out var lensSlot))
         {
             var item = Spawn(ent.Comp.LensPrototype, Transform(ent).Coordinates);
 
             if (_itemSlotsSystem.TryGetSlot(eyes, lensSlot.LensSlotId, out ItemSlot? itemSlot))
+            {
+                if (itemSlot.Item != null)
+                {
+                    Del(itemSlot.Item);
+                }
                 _itemSlotsSystem.TryInsert(eyes, itemSlot, item, user: null);
+            }
+
         }
         else
         {
@@ -49,11 +64,6 @@ public sealed class StartWithLensesSystem : EntitySystem
                     checkActionBlocker: false,
                     handsComp: handsComponent);
             }
-        }
-
-        if (eyes.Valid)
-        {
-            _inventorySystem.SpawnItemInSlot(ent, "eyes", ent.Comp.LensPrototype);
         }
     }
 }
