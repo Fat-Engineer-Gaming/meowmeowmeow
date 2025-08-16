@@ -151,7 +151,7 @@
   - type: IconSmooth
     key: walls
     mode: NoSprite
-  - type: PaintableAirlock
+  - type: Paintable
     group: Standard
     department: Civilian
   - type: StaticPrice
@@ -326,7 +326,7 @@
   - type: IconSmooth
     key: walls
     mode: NoSprite
-  - type: PaintableAirlock
+  - type: Paintable
     group: Standard
     department: Civilian
   - type: StaticPrice

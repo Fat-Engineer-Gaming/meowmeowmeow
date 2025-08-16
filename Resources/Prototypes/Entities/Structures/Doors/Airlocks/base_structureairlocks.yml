@@ -48,6 +48,9 @@
       map: ["enum.ElectrifiedLayers.Sparks"]
   - type: AnimationPlayer
   - type: Physics
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
   - type: Fixtures
     fixtures:
       fix1:
