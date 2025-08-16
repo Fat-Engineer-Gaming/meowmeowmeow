@@ -428,6 +428,7 @@
     - CableHVStackLingering10
     - Wirecutter
     - Crowbar
+    - Screwdriver
     - trayScanner
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: wire-module }
@@ -468,6 +469,7 @@
     - Wirecutter
     - WelderIndustrial
     - Multitool
+    - SprayPainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: tool-module }
 
@@ -566,6 +568,7 @@
     - WelderExperimental
     - Multitool
     - RemoteSignallerAdvanced
+    - SprayPainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-tools-module }
 
@@ -653,7 +656,7 @@
   id: BorgModuleAdvancedCleaning
   parent: [ BaseBorgModuleJanitor, BaseProviderBorgModule ]
   name: advanced cleaning cyborg module
-  description: Advanced janitorial module containing, well... advanced janitor equipment. What were you expecting?
+  description: Advanced janitorial module containing, advanced janitorial equipment, and not one, but TWO Advanced Mops. Whichever Cyborg takes this will become the omega of custodial work. Nothing will get past the abilities of the one with this module. Truthfully, if you put this in the Cyborg, you may put the Janitors out of a job... wait, what was I saying?
   components:
   - type: Sprite
     layers:
@@ -662,10 +665,12 @@
   - type: ItemBorgModule
     items:
     - AdvMopItem
+    - AdvMopItem
     - BorgMegaSprayBottle
     - HoloprojectorBorg
     - BorgDropper
     - BorgBeaker
+    - SprayPainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-cleaning-module }
 
@@ -942,7 +947,7 @@
   id: BorgModuleOperative
   parent: [ BaseBorgModuleSyndicate, BaseProviderBorgModule, Tier2Contraband ]
   name: operative cyborg module
-  description: A module that comes with a crowbar, an Emag, an Access Breaker and a syndicate pinpointer.
+  description: A module that comes with a Jaws of Life, an Emag, an Access Breaker and a syndicate pinpointer.
   components:
     - type: Sprite
       layers:
@@ -950,7 +955,7 @@
       - state: icon-syndicate
     - type: ItemBorgModule
       items:
-      - Crowbar
+      - SyndicateJawsOfLife
       - Emag
       - AccessBreaker
       - PinpointerSyndicateNuclear
@@ -1067,6 +1072,7 @@
     - Wirecutter
     - Multitool
     - RefuelingWelder
+    - SprayPainter
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-tool-module }
 
@@ -1174,7 +1180,7 @@
   parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleSword
   name: sword xenoborg module
-  description: Module with a kukri knife.
+  description: Module with a combat knife.
   components:
   - type: Sprite
     layers:
@@ -1182,7 +1188,7 @@
     - state: icon-xenoborg-sword
   - type: ItemBorgModule
     items:
-    - KukriKnife
+    - CombatKnife
     - JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword-module }
