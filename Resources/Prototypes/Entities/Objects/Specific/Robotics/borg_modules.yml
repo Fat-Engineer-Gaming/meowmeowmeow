@@ -506,6 +506,7 @@
   - type: ItemBorgModule
     items:
     - MiningDrill
+    - WeaponProtoKineticAccelerator
     - Shovel
     - MineralScannerUnpowered
     - BorgOreBag
@@ -526,6 +527,7 @@
   - type: ItemBorgModule
     items:
     - MiningDrillDiamond
+    - WeaponProtoKineticAccelerator
     - Shovel
     - AdvancedMineralScannerUnpowered
     - OreBagOfHolding
