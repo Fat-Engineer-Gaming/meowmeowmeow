@@ -1035,7 +1035,7 @@
   parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleBasic
   name: basic xenoborg module
-  description: Essential items for any xenoborg.
+  description: Essential items for any Xenoborg.
   components:
   - type: Sprite
     layers:
@@ -1053,7 +1053,7 @@
   parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleTool
   name: tool xenoborg module
-  description: Simple tools for most xenoborgs.
+  description: Simple tools for most Xenoborgs.
   components:
   - type: Sprite
     layers:
