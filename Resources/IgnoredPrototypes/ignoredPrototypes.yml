@@ -13,6 +13,7 @@
 # Map prototypes are ignored per-file instead of ignoring the entire directory, otherwise we would have to rename every prototype in salvage.yml, which would suck
 # Any new map prototypes added by upstream should be added here, but since Pools/default.yml is being ignored, missing a prototype shouldn't break anything
 - /Prototypes/Maps/Pools
+- /Prototypes/_Impstation/Maps/Pools
 - /Prototypes/Maps/amber.yml
 - /Prototypes/Maps/bagel.yml
 - /Prototypes/Maps/box.yml

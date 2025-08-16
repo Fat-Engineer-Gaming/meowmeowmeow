@@ -1,0 +1,7 @@
+- type: gameMapPool
+  id: DefaultMapPoolDevil
+  maps:
+  - Uoui
+  - PackedDevil
+  - ReachDevil
+  - SalternDevil
