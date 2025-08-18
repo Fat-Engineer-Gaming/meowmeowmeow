@@ -36,6 +36,7 @@
     - id: BountyHunterSpawn # imp
     - id: ReplicatorSpawn # imp
     - id: VRexEvent #imp
+    - id: BingleSpawn #Goobstation - Bingle
 
 - type: entityTable
   id: LesserAntagEventsTable # imp: lower impact antags
