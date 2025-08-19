@@ -598,24 +598,24 @@
 - type: entity
   parent: BaseStowawayPlushie
   id: PlushiePirateMoth
-  name: chemist lizard plushie
+  name: meLan keLp pLushie
   components:
   - type: Sprite
-    state: plushie_chemistlizard
+    state: plushie_piratemoth
   - type: UseDelay
     delay: 2
   - type: Extractable
     juiceSolution:
         reagents:
-        - ReagentId: Inaprovaline
-          Quantity: 30
+        - ReagentId: SpaceDrugs
+          Quantity: 50
   - type: SolutionContainerManager
     solutions:
       drink:
-        maxVol: 30
+        maxVol: 50
         reagents:
-        - ReagentId: Inaprovaline
-          Quantity: 30
+        - ReagentId: SpaceDrugs
+          Quantity: 50
 
 - type: entity
   parent: BaseStowawayPlushie
