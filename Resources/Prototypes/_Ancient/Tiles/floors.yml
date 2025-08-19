@@ -423,3 +423,77 @@
     collection: FootstepFloor
   friction: 5
   itemDrop: FloorTileItemDark
+  
+# r4407
+
+- type: tile
+  id: r4407_FloorSteel
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/steel.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: r4407_FloorDark
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/dark.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: r4407_FloorWhite
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/white.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: r4407_FloorBar
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/bar.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: r4407_FloorCafeteria
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/cafeteria.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel
+
+- type: tile
+  id: r4407_FloorSolarPanel
+  name: floor
+  sprite: /Textures/_Ancient/Tiles/r4407/solarpanel.png
+  baseTurf: r4407_Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  friction: 5
+  itemDrop: FloorTileItemSteel

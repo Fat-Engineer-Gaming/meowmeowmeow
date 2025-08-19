@@ -1,0 +1,32 @@
+- type: tile
+  id: r4407_FloorDesert
+  name: sand
+  sprite: /Textures/_Ancient/Tiles/r4407/sand.png
+  variants: 3
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
+
+- type: tile
+  id: r4407_FloorGrass
+  name: grass
+  sprite: /Textures/_Ancient/Tiles/r4407/grass.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  indestructible: true

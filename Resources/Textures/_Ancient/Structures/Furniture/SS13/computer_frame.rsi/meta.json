@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "construct_1"
+    },
+    {
+      "name": "construct_2"
+    },
+    {
+      "name": "construct_3"
+    },
+    {
+      "name": "construct_4"
+    },
+    {
+      "name": "construct_5"
+    },
+    {
+      "name": "aiupload"
+    },
+    {
+      "name": "arcade"
+    },
+    {
+      "name": "atmos"
+    },
+    {
+      "name": "c_unpowered"
+    },
+    {
+      "name": "comm"
+    },
+    {
+      "name": "computer_generic"
+    },
+    {
+      "name": "dna"
+    },
+    {
+      "name": "engine"
+    },
+    {
+      "name": "escape"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "power"
+    },
+    {
+      "name": "scanner"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "shuttle"
+    },
+    {
+      "name": "solar"
+    },
+    {
+      "name": "teleport"
+    }
+  ]
+}

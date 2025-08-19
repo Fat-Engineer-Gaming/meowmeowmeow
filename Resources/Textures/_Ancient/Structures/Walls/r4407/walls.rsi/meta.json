@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "solid"
+    },
+    {
+      "name": "r_wall"
+    },
+    {
+      "name": "r_wall-1"
+    },
+    {
+      "name": "r_wall-2"
+    },
+    {
+      "name": "r_wall-3"
+    },
+    {
+      "name": "r_wall-4"
+    },
+    {
+      "name": "r_wall-5"
+    },
+    {
+      "name": "r_wall-6"
+    },
+    {
+      "name": "riveted"
+    }
+  ]
+}
