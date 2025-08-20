@@ -22,6 +22,14 @@
     {
       "name": "diagonalWall",
       "directions": 4
+    },
+    {
+      "name": "state0",
+      "directions": 4
+    },
+    {
+      "name": "state1",
+      "directions": 4
     }
   ]
 }

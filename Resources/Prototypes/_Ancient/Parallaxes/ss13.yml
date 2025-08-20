@@ -17,3 +17,23 @@
       scale: "1, 1"
       tiled: true
   layersLQUseHQ: false
+
+- type: parallax
+  id: r4407
+  layers:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_Ancient/Tiles/r4407/space.png"
+      slowness: 0
+      scrolling: "0, 0"
+      scale: "1, 1"
+      tiled: true
+  layersLQ:
+    - texture:
+        !type:ImageParallaxTextureSource
+        path: "/Textures/_Ancient/Tiles/r4407/space.png"
+      slowness: 1
+      scrolling: "0, 0"
+      scale: "1, 1"
+      tiled: true
+  layersLQUseHQ: false

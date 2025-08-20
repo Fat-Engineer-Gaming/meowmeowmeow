@@ -8,10 +8,12 @@
   },
   "states": [
     {
-      "name": "alive"
+      "name": "reptilian",
+      "directions": 4
     },
     {
-      "name": "dead"
+      "name": "human",
+      "directions": 1
     }
   ]
 }
