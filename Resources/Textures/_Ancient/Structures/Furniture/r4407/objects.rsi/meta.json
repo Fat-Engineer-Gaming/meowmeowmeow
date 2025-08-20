@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "weldtank"
+    },
+    {
+      "name": "watertank"
+    },
+    {
+      "name": "stool"
+    },
+    {
+      "name": "chair",
+      "directions": 4
+    },
+    {
+      "name": "rack"
+    },
+    {
+      "name": "dispenser"
+    }
+  ]
+}

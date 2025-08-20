@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "aiupload",
+      "delays": [
+        [
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "aiuploadb"
+    },
+    {
+      "name": "airtunnel00",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel01",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel02",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel10",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel11",
+      "delays": [
+        [
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel12"
+    },
+    {
+      "name": "airtunnel0r",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel0e",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel1r",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "airtunnel1e",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "arcade",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "arcadeb",
+      "delays": [
+        [
+          2,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
+      "name": "atmos"
+    },
+    {
+      "name": "tank"
+    },
+    {
+      "name": "alert_0"
+    },
+    {
+      "name": "alert_1"
+    },
+    {
+      "name": "alert_2",
+      "delays": [
+        [
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "atmosb"
+    },
+    {
+      "name": "comm"
+    },
+    {
+      "name": "commb"
+    },
+    {
+      "name": "computer_generic",
+      "delays": [
+        [
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "computer_genericb"
+    },
+    {
+      "name": "dna",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "dnab"
+    },
+    {
+      "name": "engine"
+    },
+    {
+      "name": "engine1"
+    },
+    {
+      "name": "engine2"
+    },
+    {
+      "name": "engineb"
+    },
+    {
+      "name": "escape"
+    },
+    {
+      "name": "escapeb"
+    },
+    {
+      "name": "id"
+    },
+    {
+      "name": "idb"
+    },
+    {
+      "name": "power",
+      "delays": [
+        [
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "powerb"
+    },
+    {
+      "name": "scanner"
+    },
+    {
+      "name": "scannerb"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "securityb"
+    },
+    {
+      "name": "security_det"
+    },
+    {
+      "name": "security_detb",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "shuttle"
+    },
+    {
+      "name": "shuttleb"
+    },
+    {
+      "name": "solar"
+    },
+    {
+      "name": "solarb"
+    },
+    {
+      "name": "teleport",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "teleportb"
+    },
+    {
+      "name": "old",
+      "delays": [
+        [
+          0.5,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "old_broken"
+    }
+  ]
+}

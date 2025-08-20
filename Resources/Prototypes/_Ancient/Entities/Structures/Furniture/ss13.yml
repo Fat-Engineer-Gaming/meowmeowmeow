@@ -132,3 +132,281 @@
   - type: Icon
     sprite: _Ancient/Structures/Walls/grille.rsi
     state: grille
+    
+# r4407
+
+- type: entity
+  parent: BaseStructureComputer
+  id: r4407_BasicComputer
+  name: computer
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Animateable
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmash
+  - type: Computer
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: ExtensionCableReceiver
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Ancient/Structures/Furniture/SS13/computer_frame.rsi # use base directory for screen and keys (unless we've resprited them), use imp directory for body, keyboard, and panel
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_generic
+    - map: ["computerLayerScreen"]
+      state: computer_generic
+      sprite: _Ancient/Structures/Furniture/SS13/computer.rsi # imp
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ComputerVisuals.Powered:
+        computerLayerScreen:
+          True: { visible: true, shader: unshaded }
+          False: { visible: false }
+  - type: LitOnPowered
+  - type: PointLight
+    color: "#00D405FF" #imp
+    radius: 2.4 #imp
+    energy: 1.6
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    offset: "0, 0.4" # shine from the top, not bottom of the computer
+    castShadows: false
+    
+- type: entity
+  name: chair
+  id: r4407_Chair
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: chair
+    
+- type: entity
+  name: stool
+  id: r4407_Stool
+  parent: ChairBase
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: stool
+    
+- type: entity
+  name: rack
+  id: r4407_Rack
+  parent: Rack
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: rack
+    
+- type: entity
+  id: r4407_WaterTank
+  parent: [StorageTank, StructureWheeled]
+  name: water tank
+  description: A water tank. It's used to store high amounts of water.
+  suffix: Empty
+  components:
+  - type: Tag # imp
+    tags:
+    - WaterTank
+  - type: StaticPrice
+    price: 500
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: watertank
+  - type: Appearance
+  - type: ExaminableSolution
+    solution: tank
+
+- type: entity
+  parent: r4407_WaterTank
+  id: r4407_WaterTankFull
+  suffix: Full
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: Water
+          Quantity: 1500
+
+- type: entity
+  parent: r4407_WaterTank
+  id: r4407_FuelTank
+  name: fuel tank
+  description: A fuel tank. It's used to store high amounts of fuel.
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: weldtank
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 1500
+
+- type: entity
+  parent: VendingMachine
+  id: r4407_TankDispenserEVA
+  suffix: EVA [O2, N2]
+  name: gas tank dispenser
+  description: A vendor for dispensing gas tanks. Does not dispense frezon.
+  components:
+  - type: VendingMachine
+    pack: TankDispenserEVAInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/r4407/objects.rsi
+    state: dispenser
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineCoffee
+  name: Solar's Best Hot Drinks
+  description: Served boiling so it stays hot all shift!
+  components:
+  - type: VendingMachine
+    pack: HotDrinksMachineInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "coffee-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "coffee"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: coffee-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineSnacks
+  name: Getmore Chocolate Corp
+  description: A snack machine courtesy of the Getmore Chocolate Corporation, based out of Mars.
+  components:
+  - type: VendingMachine
+    pack: DiscountDansInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "snack-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "snack"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: snack-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineCigs
+  name: ShadyCigs Deluxe
+  description: If you want to get cancer, might as well do it in style.
+  components:
+  - type: VendingMachine
+    pack: CigaretteMachineInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "cigs-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "cigs"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: cigs-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineMedical
+  name: NanoMed Plus
+  description: It's a medical drug dispenser. Natural chemicals only!
+  components:
+  - type: VendingMachine
+    pack: NanoMedPlusInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "med-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "med"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: med-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineSec
+  name: SecTech
+  description: A vending machine containing Security equipment. A label reads SECURITY PERSONNEL ONLY.
+  components:
+  - type: VendingMachine
+    pack: SecTechInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "sec-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "sec"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: sec-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"
+    
+- type: entity
+  parent: VendingMachine
+  id: r4407_VendingMachineGeneric
+  name: Vending Machine
+  description: It's a vending machine. What did you expect?
+  components:
+  - type: VendingMachine
+    pack: VendomatInventory
+    soundVend: /Audio/_Impstation/Machines/vending_drop.ogg #imp
+  - type: Sprite
+    sprite: _Ancient/Structures/Furniture/vending.rsi
+    layers:
+    - state: "generic-off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "generic"
+      map: ["enum.VendingMachineVisualLayers.Screen"]
+      shader: unshaded
+    - state: generic-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.3
+    color: "#ad7c4b"

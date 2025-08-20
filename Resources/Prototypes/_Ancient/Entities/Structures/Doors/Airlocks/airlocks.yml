@@ -155,3 +155,292 @@
   components:
   - type: Sprite
     sprite: _Ancient/Structures/Doors/Airlocks/Glass/security.rsi
+
+
+# r4407
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockFreezer
+  suffix: Freezer
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/freezer.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockEngineering
+  suffix: Engineering
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/engineering.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockCargo
+  suffix: Cargo
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/cargo.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockMedical
+  suffix: Medical
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/medical.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockScience
+  suffix: Science
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/science.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockCommand
+  suffix: Command
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/command.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockSecurity
+  suffix: Security
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/security.rsi
+
+- type: entity
+  parent: r4407_Airlock
+  id: r4407_AirlockMaint
+  name: maintenance hatch
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Standard/maint.rsi
+
+# Glass
+
+- type: entity
+  id: r4407_AirlockGlass
+  parent: r4407_Airlock
+  name: glass airlock
+  suffix: Ancient
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        collection: GlassSmack
+  - type: Door
+    occludes: false
+  - type: Occluder
+    enabled: false
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/glass.rsi
+    snapCardinals: true
+  - type: AnimationPlayer
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
+        - GlassAirlockLayer
+  - type: LayerChangeOnWeld
+    unWeldedLayer: GlassAirlockLayer
+    weldedLayer: GlassLayer
+  - type: Construction
+    graph: Airlock
+    node: glassAirlock
+  - type: Paintable
+    group: Glass
+  - type: RadiationBlocker
+    resistance: 2
+  - type: Tag
+    tags:
+      - GlassAirlock
+      # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockEngineeringGlass
+  suffix: Engineering
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/engineering.rsi
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockCargoGlass
+  suffix: Cargo
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/cargo.rsi
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockMedicalGlass
+  suffix: Medical
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/medical.rsi
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockScienceGlass
+  suffix: Science
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/science.rsi
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockCommandGlass
+  suffix: Command
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/command.rsi
+
+- type: entity
+  parent: r4407_AirlockGlass
+  id: r4407_AirlockSecurityGlass
+  suffix: Security
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: Structures/Doors/Airlocks/Glass/security.rsi
+
+- type: entity
+  parent: AirlockRCDResistant
+  id: r4407_AirlockExternal
+  suffix: External
+  description: It opens, it closes, it might crush you, and there might be only space behind it.
+  components:
+  - type: Door
+    crushDamage:
+      types:
+        Blunt: 15
+    openSound:
+      path: /Audio/Machines/airlock_ext_open.ogg
+    closeSound:
+      path: /Audio/Machines/airlock_ext_close.ogg
+    denySound:
+      path: /Audio/Machines/airlock_deny.ogg
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/external.rsi
+    snapCardinals: true
+  - type: Wires
+    layoutId: AirlockExternal
+  - type: Paintable
+    group: null
+
+- type: entity
+  parent: AirlockExternal
+  id: r4407_AirlockExternalGlass
+  suffix: Glass, External
+  components:
+  - type: Door
+    occludes: false
+  - type: Occluder
+    enabled: false
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/external.rsi
+    snapCardinals: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49" # don't want this colliding with walls or they won't close
+        density: 100
+        mask:
+        - FullTileMask
+        layer:     #removed opaque from the layer, allowing lasers to pass through glass airlocks
+        - GlassAirlockLayer
+        
+- type: entity
+  id: r4407_BlastDoor
+  parent: BaseShutter
+  name: blast door
+  description: It's a blast door. An old design, but definitely a blast door.
+  components:
+  - type: AccessReader
+    containerAccessProvider: board
+  - type: Sprite
+    sprite: _Ancient/Structures/Doors/r4407/rapid_pdoor.rsi
+    snapCardinals: true
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Door
+    closeTimeOne: 0.4
+    closeTimeTwo: 0.4
+    openTimeOne: 0.4
+    openTimeTwo: 0.4
+    openingAnimationTime: 1.0
+    closingAnimationTime: 1.0
+    canPry: false
+    crushDamage:
+      types:
+        Blunt: 25 # yowch
+    openSound:
+      path: /Audio/Machines/blastdoor.ogg
+    closeSound:
+      path: /Audio/Machines/blastdoor.ogg
+  - type: Occluder
+  - type: Appearance
+  - type: RadiationBlocker
+    resistance: 8
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: StaticPrice
+    price: 500
+  - type: InteractionPopup
+    interactSuccessString: comp-window-knock
+    messagePerceivedByOthers: comp-window-knock
+    interactSuccessSound:
+      path: /Audio/Effects/glass_knock.ogg
+    interactDelay: 2.5 #imp edit, help sensory issues
+    
+- type: entity
+  id: r4407_BlastDoorOpen
+  parent: r4407_BlastDoor
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false
+  - type: Airtight
+    airBlocked: false
+  - type: RadiationBlocker
+    enabled: false
