@@ -104,12 +104,10 @@
   - type: ZombieImmune
   - type: Repairable
     doAfterDelay: 10
-    allowSelfRepair: false
   - type: BorgChassis
   - type: LockingWhitelist
     blacklist:
       components:
-      - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
     openingTool: Prying
