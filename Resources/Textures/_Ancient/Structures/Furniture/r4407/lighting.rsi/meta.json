@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "plight_on",
+      "directions": 4
+    },
+    {
+      "name": "plight_off",
+      "directions": 4
+    },
+    {
+      "name": "plight_empty",
+      "directions": 4
+    },
+    {
+      "name": "plight_broken",
+      "directions": 4
+    },
+    {
+      "name": "slight_on",
+      "directions": 4
+    },
+    {
+      "name": "slight_off",
+      "directions": 4
+    },
+    {
+      "name": "slight_broken",
+      "directions": 4
+    },
+    {
+      "name": "slight_open",
+      "directions": 4
+    },
+    {
+      "name": "tube"
+    },
+    {
+      "name": "tube_broken"
+    },
+    {
+      "name": "bulb"
+    },
+    {
+      "name": "bulb_broken"
+    }
+  ]
+}

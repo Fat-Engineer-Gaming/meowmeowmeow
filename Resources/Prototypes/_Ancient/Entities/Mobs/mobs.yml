@@ -8,13 +8,7 @@
     sprite: _Ancient/Mobs/simplemobs.rsi
     state: reptilian
     layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: reptilian
-    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
+    - map: [ "jumpsuit" ]
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
@@ -30,7 +24,6 @@
     - map: [ "pocket2" ]
   - type: Inventory
     speciesId: reptilian
-  - type: InventorySlots
   - type: Body
     prototype: Reptilian
     requiredLegs: 1
@@ -58,87 +51,6 @@
     state: icon
   - type: AnimationPlayer
   - type: Buckle
-  - type: Emoting
-  - type: BodyEmotes
-    soundsId: GeneralBodyEmotes
-  - type: Grammar
-    attributes:
-      proper: true
-  - type: MobPrice
-    price: 1500 # Kidnapping a living person and selling them for cred is a good move.
-    deathPenalty: 0.01 # However they really ought to be living and intact, otherwise they're worth 100x less.
-  - type: CanEscapeInventory # Carrying system from nyanotrasen.
-  - type: Tag
-    tags:
-    - CanPilot
-    - FootstepSound
-    - DoorBumpOpener
-    - AnomalyHost
-  - type: Puller
-  - type: RotationVisuals
-    defaultRotation: 90
-    horizontalRotation: 90
-    
-- type: entity
-  parent: SimpleMobBase
-  id: Ancient_MobHuman
-  name: ancient human
-  description: A miserable pile of secrets.
-  components:
-  - type: Sprite
-    sprite: _Ancient/Mobs/simplemobs.rsi
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: human
-    - map: ["enum.HumanoidVisualLayers.Handcuffs"]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-    - map: [ "gloves" ]
-    - map: [ "shoes" ]
-    - map: [ "ears" ]
-    - map: [ "eyes" ]
-    - map: [ "belt" ]
-    - map: [ "id" ]
-    - map: [ "outerClothing" ]
-    - map: [ "back" ]
-    - map: [ "neck" ]
-    - map: [ "mask" ]
-    - map: [ "head" ]
-    - map: [ "pocket1" ]
-    - map: [ "pocket2" ]
-  - type: Inventory
-    speciesId: human
-    templateId: human
-  - type: Body
-    prototype: Human
-    requiredLegs: 1
-  - type: Stripping
-  - type: UserInterface
-    interfaces:
-      enum.HumanoidMarkingModifierKey.Key:
-        type: HumanoidMarkingModifierBoundUserInterface
-      enum.StrippingUiKey.Key:
-        type: StrippableBoundUserInterface
-      enum.StoreUiKey.Key:
-        type: StoreBoundUserInterface
-      enum.ThavenMoodsUiKey.Key: # impstation edit
-        type: ThavenMoodsBoundUserInterface
-        requireInputValidation: false
-  - type: IdExaminable
-  - type: Hands
-  - type: ComplexInteraction
-  - type: Internals
-  - type: FloatingVisuals
-  - type: Climbing
-  - type: Cuffable
-  - type: Ensnareable
-    sprite: Objects/Misc/ensnare.rsi
-    state: icon
-  - type: AnimationPlayer
-  - type: Buckle
-  - type: InventorySlots
   - type: Emoting
   - type: BodyEmotes
     soundsId: GeneralBodyEmotes

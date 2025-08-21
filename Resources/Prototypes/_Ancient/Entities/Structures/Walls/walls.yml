@@ -408,3 +408,101 @@
       types:
         Blunt: 8
     bonkTime: 3
+    
+# r4407
+
+- type: entity
+  parent: BaseWall
+  id: r4407_WallSolid
+  name: solid wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Ancient/Structures/Walls/r4407/walls.rsi
+    state: solid
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/r4407/walls.rsi
+    state: solid
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        
+- type: entity
+  parent: BaseWall
+  id: r4407_ClassicWallReinforced
+  name: reinforced wall
+  suffix: Classic, Ancient
+  components:
+  - type: Sprite
+    snapCardinals: true
+    sprite: _Ancient/Structures/Walls/r4407/walls.rsi
+    state: r_wall
+  - type: Icon
+    sprite: _Ancient/Structures/Walls/r4407/walls.rsi
+    state: r_wall
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: ReinforcedWallReplacementMarker
+  - type: StaticPrice
+    price: 250
+  - type: RadiationBlocker
+    resistance: 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:ChangeConstructionNodeBehavior
+        node: girder
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
