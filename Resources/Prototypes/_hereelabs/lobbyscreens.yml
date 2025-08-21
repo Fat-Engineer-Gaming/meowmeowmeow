@@ -1,0 +1,6 @@
+- type: lobbyBackground
+  id: DevilsTation
+  background: /Textures/_hereelabs/LobbyScreens/title.webp
+  # EE - Lobby Background Credits
+  name: DevilsTation
+  artist: hereelabs
