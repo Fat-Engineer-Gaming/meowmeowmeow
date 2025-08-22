@@ -4,8 +4,8 @@ meta:
   engineVersion: 265.0.0
   forkId: ""
   forkVersion: ""
-  time: 08/22/2025 16:10:16
-  entityCount: 4019
+  time: 08/22/2025 17:00:55
+  entityCount: 4023
 maps: []
 grids:
 - 1
@@ -14547,8 +14547,12 @@ entities:
       pos: 18.5,3.5
       parent: 1
     - type: HealOnBuckle
+      nextHealTime: -744.9309679
     - type: ActionsContainer
     - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents: []
     - type: HealOnBuckleHealing
   - uid: 411
     mapInit: true
@@ -14558,8 +14562,12 @@ entities:
       pos: -8.5,21.5
       parent: 1
     - type: HealOnBuckle
+      nextHealTime: -744.9309679
     - type: ActionsContainer
     - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents: []
   - uid: 413
     mapInit: true
     paused: true
@@ -14568,8 +14576,12 @@ entities:
       pos: 20.5,22.5
       parent: 1
     - type: HealOnBuckle
+      nextHealTime: -744.9309679
     - type: ActionsContainer
     - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents: []
   - uid: 1976
     components:
     - type: Transform
@@ -20886,6 +20898,31 @@ entities:
     - type: Transform
       pos: 17.5,18.5
       parent: 1
+  - uid: 2648
+    components:
+    - type: Transform
+      pos: 15.5,17.5
+      parent: 1
+  - uid: 4020
+    components:
+    - type: Transform
+      pos: 15.5,15.5
+      parent: 1
+  - uid: 4021
+    components:
+    - type: Transform
+      pos: 15.5,14.5
+      parent: 1
+  - uid: 4022
+    components:
+    - type: Transform
+      pos: 15.5,16.5
+      parent: 1
+  - uid: 4023
+    components:
+    - type: Transform
+      pos: 15.5,13.5
+      parent: 1
 - proto: CableTerminal
   entities:
   - uid: 895
@@ -23538,7 +23575,7 @@ entities:
         title: null
     - type: Storage
       storedItems:
-        2648:
+        invalid:
           position: 0,0
           _rotation: South
     - type: ContainerContainer
@@ -23547,7 +23584,7 @@ entities:
           showEnts: False
           occludes: True
           ents:
-          - 2648
+          - invalid
 - proto: ClothingBeltJanitorFilled
   entities:
   - uid: 529
@@ -25088,7 +25125,7 @@ entities:
     - type: Occluder
       enabled: False
     - type: Door
-      secondsUntilStateChange: -13235.175
+      secondsUntilStateChange: -13719.334
       state: Closing
     - type: Physics
       canCollide: False
@@ -25471,8 +25508,12 @@ entities:
       pos: 17.5,2.5
       parent: 1
     - type: HealOnBuckle
+      nextHealTime: -744.9309679
     - type: ActionsContainer
     - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents: []
     - type: HealOnBuckleHealing
   - uid: 1978
     components:
@@ -34701,8 +34742,12 @@ entities:
       pos: 20.5,10.5
       parent: 1
     - type: HealOnBuckle
+      nextHealTime: -744.9309679
     - type: ActionsContainer
     - type: ContainerContainer
+      containers:
+        actions: !type:Container
+          ents: []
 - proto: OxygenTankFilled
   entities:
   - uid: 174
@@ -35842,7 +35887,8 @@ entities:
       fibers: []
       fingerprints: []
     - type: RadiationSource
-      intensity: 15
+      enabled: False
+      intensity: 0
 - proto: PosterContrabandBorgFancy
   entities:
   - uid: 1213
@@ -39931,6 +39977,9 @@ entities:
       fibers: []
       fingerprints:
       - DD10A7ABFE1FAD57E60192509EA548B9
+    - type: BatterySelfRecharger
+      autoRechargeRate: 8000000
+      autoRecharge: True
 - proto: SMESMachineCircuitboard
   entities:
   - uid: 228
@@ -41650,6 +41699,29 @@ entities:
     - type: Transform
       pos: 19.5,0.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        3146:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        3147:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
+        3133:
+        - - Left
+          - Reverse
+        - - Right
+          - Forward
+        - - Middle
+          - Off
 - proto: UprightPianoInstrument
   entities:
   - uid: 3552
