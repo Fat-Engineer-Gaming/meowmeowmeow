@@ -127,7 +127,7 @@ namespace Content.IntegrationTests.Tests
             "Bedlam",
             "Boat",
             "BoxImp",
-            "CentCommImp",
+            //"CentCommImp",
             "CogImp",
             "CoreImp",
             "E1M1",
@@ -155,6 +155,13 @@ namespace Content.IntegrationTests.Tests
             "Refsdal",
             "Skimmer",
             "Union",
+
+            // Devilstation Protos
+            "Uoui",
+            "PackedDevil",
+            "ReachDevil",
+            "SalternDevil",
+            "CentCommDevil",
         };
 
         private static readonly ProtoId<EntityCategoryPrototype> DoNotMapCategory = "DoNotMap";
