@@ -57732,7 +57732,7 @@ entities:
     - type: Transform
       pos: -46.370575,12.558496
       parent: 2
-- proto: ClothingNeckFuckhubMedal
+- proto: ClothingNeckOddMedal
   entities:
   - uid: 27067
     components:
