@@ -82,7 +82,7 @@
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: CrewsimovBorg # Goobstation - AI/borg law changes - borgs obeying AI
   - type: Inventory
     templateId: borg
   - type: Hands
