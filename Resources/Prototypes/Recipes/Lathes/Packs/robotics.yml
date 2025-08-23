@@ -32,6 +32,7 @@
   id: Robotics
   recipes:
   - ProximitySensor
+  - AiRemoteBrain
 
 - type: latheRecipePack
   parent: BorgModulesImp # imp

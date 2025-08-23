@@ -14,4 +14,6 @@ public sealed partial class SiliconLawUpdaterComponent : Component
     /// </summary>
     [DataField(required: true)]
     public ComponentRegistry Components;
+
+    public ProtoId<SiliconLawsetPrototype> LastLawset { get; set; }
 }
