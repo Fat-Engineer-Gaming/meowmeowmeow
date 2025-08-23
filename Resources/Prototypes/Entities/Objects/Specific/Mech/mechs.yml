@@ -131,6 +131,7 @@
     pilotWhitelist:
       components:
         - HumanoidAppearance
+        - BorgChassis # Goobstation - Let borgs pilot mechs
   - type: MeleeWeapon
     hidden: true
     attackRate: 0.7 #imp change
@@ -181,6 +182,7 @@
     pilotWhitelist:
       components:
       - HumanoidAppearance
+      - BorgChassis # Goobstation - Let borgs pilot mechs
 
 - type: entity
   parent: MechHonker
