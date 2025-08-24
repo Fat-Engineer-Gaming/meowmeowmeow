@@ -14,7 +14,6 @@
   - type: InstantAction
     event: !type:OpenEvolutionMenuEvent {}
   - type: ChangelingAction
-    requireBiomass: false
     useInLesserForm: true
     useInLastResort: true
 
@@ -39,7 +38,6 @@
     event: !type:AbsorbDNAEvent {}
   - type: ChangelingAction
     chemicalCost: 25
-    requireBiomass: false
     useInLesserForm: true
 
 - type: entity
@@ -78,7 +76,6 @@
   - type: InstantAction
     event: !type:ChangelingTransformCycleEvent {}
   - type: ChangelingAction
-    requireBiomass: false
     useInLesserForm: true
 
 - type: entity
@@ -103,7 +100,7 @@
   parent: BaseMentalAction
   id: ActionEnterStasis
   name: Enter Regenerative Stasis
-  description: We fall into a stasis, allowing us to regenerate while appearing dead to the unwise. Drains all of our chemicals, and consumes biomass.
+  description: We fall into a stasis, allowing us to regenerate while appearing dead to the unwise. Drains all of our chemicals.
   components:
   - type: Action
     itemIconStyle: NoItem
@@ -113,7 +110,6 @@
   - type: InstantAction
     event: !type:EnterStasisEvent {}
   - type: ChangelingAction
-    biomassCost: 1
     useInLesserForm: true
     useInLastResort: true
 
@@ -561,7 +557,6 @@
     event: !type:ActionLastResortEvent {}
   - type: ChangelingAction
     chemicalCost: 20
-    biomassCost: -30 # absorbing the rest of the current body on use
     useInLesserForm: true
 
 - type: entity
