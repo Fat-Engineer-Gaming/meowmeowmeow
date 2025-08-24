@@ -29,9 +29,6 @@ public sealed partial class ChangelingSystem : EntitySystem
                 stateNormalized = (int) (comp.Chemicals / comp.MaxChemicals * 18);
                 break;
 
-            case "ChangelingBiomass":
-                stateNormalized = (int) (comp.Biomass / comp.MaxBiomass * 16);
-                break;
             default:
                 return;
         }

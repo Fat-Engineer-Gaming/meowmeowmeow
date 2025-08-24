@@ -158,12 +158,6 @@ public sealed partial class ChangelingSystem : EntitySystem
     {
         UpdateChemicals(uid, comp);
 
-        comp.BiomassUpdateTimer += 1;
-        if (comp.BiomassUpdateTimer >= comp.BiomassUpdateCooldown)
-        {
-            comp.BiomassUpdateTimer = 0;
-            UpdateBiomass(uid, comp);
-        }
 
         UpdateAbilities(uid, comp);
     }
@@ -178,60 +172,6 @@ public sealed partial class ChangelingSystem : EntitySystem
         _alerts.ShowAlert(uid, "ChangelingChemicals");
     }
 
-    private void UpdateBiomass(EntityUid uid, ChangelingComponent comp, float? amount = null)
-    {
-        comp.Biomass += amount ?? -1;
-        comp.Biomass = Math.Clamp(comp.Biomass, 0, comp.MaxBiomass);
-        Dirty(uid, comp);
-        _alerts.ShowAlert(uid, "ChangelingBiomass");
-
-        var random = (int)_rand.Next(1, 3);
-
-        if (comp.Biomass <= 0)
-            // game over, man
-            _damage.TryChangeDamage(uid, new DamageSpecifier(_proto.Index(AbsorbedDamageGroup), 50), true);
-
-        if (comp.Biomass <= comp.MaxBiomass / 15)
-        {
-            // THE FUNNY ITCH IS REAL!!
-            comp.BonusChemicalRegen = 3f;
-            _popup.PopupEntity(Loc.GetString("popup-changeling-biomass-deficit-high"), uid, uid, PopupType.LargeCaution);
-            if (!_mobState.IsDead(uid))
-                _jitter.DoJitter(uid, TimeSpan.FromSeconds(comp.BiomassUpdateCooldown), true, amplitude: 5, frequency: 10);
-        }
-        else if (comp.Biomass <= comp.MaxBiomass / 5)
-        {
-            // vomit blood
-            if (random == 1)
-            {
-                if (TryComp<StatusEffectsComponent>(uid, out var status))
-                    _movementMod.TryUpdateMovementSpeedModDuration(uid, MovementModStatusSystem.VomitingSlowdown, TimeSpan.FromSeconds(1.5f), 0.5f);
-
-                var solution = new Solution();
-
-                var vomitAmount = 15f;
-                _blood.TryModifyBloodLevel(uid, -vomitAmount);
-                solution.AddReagent("Blood", vomitAmount);
-
-                _puddle.TrySplashSpillAt(uid, Transform(uid).Coordinates, solution, out _);
-
-                _popup.PopupEntity(Loc.GetString("disease-vomit", ("person", Identity.Entity(uid, EntityManager))), uid);
-            }
-
-            // the funny itch is not real
-            if (random == 3)
-            {
-                _popup.PopupEntity(Loc.GetString("popup-changeling-biomass-deficit-medium"), uid, uid, PopupType.MediumCaution);
-                _jitter.DoJitter(uid, TimeSpan.FromSeconds(.5f), true, amplitude: 5, frequency: 10);
-            }
-        }
-        else if (comp.Biomass <= comp.MaxBiomass / 2 && random == 3)
-        {
-            if (random == 1)
-                _popup.PopupEntity(Loc.GetString("popup-changeling-biomass-deficit-low"), uid, uid, PopupType.SmallCaution);
-        }
-        else comp.BonusChemicalRegen = 0f;
-    }
     private void UpdateAbilities(EntityUid uid, ChangelingComponent comp)
     {
         _speed.RefreshMovementSpeedModifiers(uid);
@@ -295,12 +235,6 @@ public sealed partial class ChangelingSystem : EntitySystem
         if (!TryComp<ChangelingActionComponent>(action.Action, out var lingAction))
             return false;
 
-        if (comp.Biomass < 1 && lingAction.RequireBiomass)
-        {
-            _popup.PopupEntity(Loc.GetString("changeling-biomass-deficit"), uid, uid);
-            return false;
-        }
-
         if ((!lingAction.UseInLesserForm && comp.IsInLesserForm) || (!lingAction.UseInLastResort && comp.IsInLastResort))
         {
             _popup.PopupEntity(Loc.GetString("changeling-action-fail-lesserform"), uid, uid);
@@ -321,7 +255,6 @@ public sealed partial class ChangelingSystem : EntitySystem
         }
 
         UpdateChemicals(uid, comp, -lingAction.ChemicalCost);
-        UpdateBiomass(uid, comp, -lingAction.BiomassCost);
 
         action.Handled = true;
 
@@ -491,9 +424,6 @@ public sealed partial class ChangelingSystem : EntitySystem
 
         newComp.Chemicals = comp.Chemicals;
         newComp.MaxChemicals = comp.MaxChemicals;
-
-        newComp.Biomass = comp.Biomass;
-        newComp.MaxBiomass = comp.MaxBiomass;
 
         newComp.IsInLesserForm = comp.IsInLesserForm;
         newComp.IsInLastResort = comp.IsInLastResort;
@@ -679,11 +609,9 @@ public sealed partial class ChangelingSystem : EntitySystem
 
         // making sure things are right in this world
         comp.Chemicals = comp.MaxChemicals;
-        comp.Biomass = comp.MaxBiomass;
 
         // show alerts
         UpdateChemicals(uid, comp, 0);
-        UpdateBiomass(uid, comp, 0);
         // make their blood unreal
         _blood.ChangeBloodReagent(uid, "BloodChangeling");
     }
