@@ -170,6 +170,15 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             LawString = Loc.GetString("law-emag-secrecy", ("faction", Loc.GetString(component.Lawset.ObeysTo))),
             Order = component.Lawset.Laws.Max(law => law.Order) + 1
         });
+        //Starlight: Add the syndicate channel to the silicon.
+        if (TryComp(uid, out ActiveRadioComponent? activeRadio))
+        {
+            activeRadio.Channels.Add("Syndicate");
+        }
+        if (TryComp(uid, out IntrinsicRadioTransmitterComponent? transmitter))
+        {
+            transmitter.Channels.Add("Syndicate");
+        }
     }
 
     protected override void EnsureSubvertedSiliconRole(EntityUid mindId)
