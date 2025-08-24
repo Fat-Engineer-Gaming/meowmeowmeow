@@ -339,6 +339,9 @@
     - BorgModules
     - MechParts
     - MechEquipment
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - StarlightSyndicateModules
   - type: MaterialStorage
     whitelist:
       tags:
