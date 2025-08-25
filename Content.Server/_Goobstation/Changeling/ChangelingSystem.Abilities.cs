@@ -173,7 +173,6 @@ public sealed partial class ChangelingSystem : EntitySystem
             biomassPercentRestored /= 2;
 
         PlayMeatySound(args.User, comp);
-        UpdateBiomass(uid, comp, comp.MaxBiomass * biomassPercentRestored - comp.TotalAbsorbedEntities);
 
         var dmg = new DamageSpecifier(_proto.Index(AbsorbedDamageGroup), 200);
         _damage.TryChangeDamage(target, dmg, true, false);
@@ -194,7 +193,6 @@ public sealed partial class ChangelingSystem : EntitySystem
             popupSelf = Loc.GetString("changeling-absorb-end-self-ling", ("target", Identity.Entity(target, EntityManager)));
             bonusChemicals += targetComp.MaxChemicals / 2;
             bonusEvolutionPoints += 2;
-            comp.MaxBiomass += targetComp.MaxBiomass / 2;
         }
         else
         {

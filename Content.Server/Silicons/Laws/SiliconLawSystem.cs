@@ -161,7 +161,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
         component.Lawset?.Laws.Insert(0, new SiliconLaw
         {
             LawString = Loc.GetString("law-emag-custom", ("name", Name(args.user)), ("title", Loc.GetString(component.Lawset.ObeysTo))),
-            Order = 0
+            Order = -1 // Goobstation - AI/borg law changes - borgs obeying AI
         });
 
         //Add the secrecy law after the others
@@ -170,6 +170,15 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
             LawString = Loc.GetString("law-emag-secrecy", ("faction", Loc.GetString(component.Lawset.ObeysTo))),
             Order = component.Lawset.Laws.Max(law => law.Order) + 1
         });
+        //Starlight: Add the syndicate channel to the silicon.
+        if (TryComp(uid, out ActiveRadioComponent? activeRadio))
+        {
+            activeRadio.Channels.Add("Syndicate");
+        }
+        if (TryComp(uid, out IntrinsicRadioTransmitterComponent? transmitter))
+        {
+            transmitter.Channels.Add("Syndicate");
+        }
     }
 
     protected override void EnsureSubvertedSiliconRole(EntityUid mindId)
