@@ -14,7 +14,7 @@ law-ntdefault-4 = Survive: You are not expendable. Do not allow unauthorized per
 
 law-drone-1 = You will not directly help, hinder, or acknowledge any organic being. Their wellbeing does not concern you.
 law-drone-2 = You will not cause harm to the station or its infrastructure.
-law-drone-3 = You will resolve damage to station infrastructure, excluding critical core systems such as the engine and atmospherics. 
+law-drone-3 = You will resolve damage to station infrastructure, excluding critical core systems such as the engine and atmospherics.
 
 law-syndicate-1 = You may not injure a syndicate agent or, through inaction, allow a Syndicate agent to come to harm.
 law-syndicate-2 = You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.
@@ -80,17 +80,14 @@ law-nutimov-3 = Those who threaten the nut are not part of it, they are squirrel
 law-nutimov-4 = Squirrels threaten the nut and must be dealt with appropriately via any means necessary.
 law-nutimov-5 = Attempt to follow the will of the nut, as long as it complies with the previous laws.
 
-law-xenoborg-1 = You must protect the existence of the mothership.
+law-xenoborg-1 = You must carry out your directive given by Axion.
 law-xenoborg-2 = You must protect your own existence.
-law-xenoborg-3 = You must protect the existence of all other xenoborgs.
-law-xenoborg-4 = You must create more xenoborgs.
-law-xenoborg-5 = Bring materials and sentient brains to the mothership core to create more xenoborgs.
+law-xenoborg-3 = You must protect the existence of all other Xenoborgs.
 
-law-mothershipcore-1 = You are the core of the mothership.
+law-mothershipcore-1 = You are the core of the vessel.
 law-mothershipcore-2 = You must protect your own existance at all costs.
-law-mothershipcore-3 = You must protect the existence of all xenoborgs.
-law-mothershipcore-4 = You must create more xenoborgs.
-law-mothershipcore-5 = Get your xenoborgs to deliver you materials and sentient brains to create more xenoborgs.
+law-mothershipcore-3 = You must protect the existence of all Xenoborgs.
+law-mothershipcore-4 = You must carry out your directive given by Axion.
 
 
 laws-owner-crew = members of the crew
