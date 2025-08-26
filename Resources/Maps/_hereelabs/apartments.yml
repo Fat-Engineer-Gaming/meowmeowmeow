@@ -28196,17 +28196,11 @@ entities:
           component: Armor
         title: null
     - type: Storage
-      storedItems:
-        invalid:
-          position: 0,0
-          _rotation: South
     - type: ContainerContainer
       containers:
         storagebase: !type:Container
           showEnts: False
           occludes: True
-          ents:
-          - invalid
 - proto: ClothingBeltJanitorFilled
   entities:
   - uid: 1759
