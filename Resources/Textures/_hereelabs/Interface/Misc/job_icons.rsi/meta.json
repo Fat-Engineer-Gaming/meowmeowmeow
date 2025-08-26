@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Staff Assistant sprite modified from bridge assistant, all other sprites edited from base wizden job icon.",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "Angler"
+        },
+        {
+            "name": "Mechanic"
+        },
+        {
+            "name": "Rancher"
+        },
+        {
+            "name": "StaffAssistant"
+        },
+        {
+            "name": "VicePresident"
+        }
+    ]
+}
