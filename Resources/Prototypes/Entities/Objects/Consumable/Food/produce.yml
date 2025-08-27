@@ -192,6 +192,9 @@
     damage:
       types:
         Blunt: 10
+  - type: Tag
+    tags:
+    - Log
   - type: Produce
     seedId: towercap
   - type: Log
