@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Both sprites edited from base wizden sprites from job_icons.rsi and id_cards.rsi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "idvicepresident"
+        },
+        {
+            "name": "idangler"
+        },
+        {
+            "name": "idassistant"
+        },
+        {
+            "name": "idrancher"
+        },
+        {
+            "name": "weatheredgold"
+        },
+        {
+            "name": "default"
+        }
+    ]
+}
