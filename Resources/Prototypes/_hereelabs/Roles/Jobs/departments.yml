@@ -1,0 +1,12 @@
+- type: department
+  id: Special
+  name: Special
+  description: Special jobs.
+  color: "#E3B927" #imp edit, grey for the greytide
+  weight: -12
+  roles:
+  - VicePresident
+  - Angler
+  - Rancher
+  - StaffAssistant
+  - SousChef

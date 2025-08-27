@@ -1,0 +1,56 @@
+- type: job
+  id: SousChef
+  name: Sous Chef 
+  description: Criticize Le Patron's cooking skills. Get hit over the head with a rolling pin. 
+  playTimeTracker: JobSousChef
+  startingGear: ChefGear
+  icon: "JobIconChef"
+  supervisors: job-supervisors-hd
+  access:
+  - Maintenance
+  - Kitchen
+  extendedAccess:
+  - Service
+  
+- type: startingGear
+  id: SousChefGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChef
+    head: ClothingHeadHatChef
+    outerClothing: ClothingOuterJacketChef
+    gloves: ClothingHandsGlovesColorWhite
+    shoes: ClothingShoesChef
+    back: ClothingBackpack
+    id: SousChefPDA
+
+- type: entity
+  parent: BasePDA
+  id: SousChefPDA
+  name: sous chef PDA
+  description: It's a PDA.
+  components:
+  - type: Pda
+    id: SousChefIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cook
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+  - type: Icon
+    state: pda-cook
+  - type: ReplacementAccent # for random sentience event
+    accent: italian
+    
+- type: entity
+  parent: IDCardStandard
+  id: SousChefIDCard
+  name: sous chef ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcook
+  - type: PresetIdCard
+    job: SousChef
